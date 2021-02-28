@@ -6,7 +6,7 @@ function appBuilder() {
   <div id="progress"></div>
   <div class='container'>
     <div class='row'>
-
+    
       <div id="eat" class="quad col-sm m-1 p-4"></div>
 
       <div id="play" class="quad col-sm m-1 p-4"></div>

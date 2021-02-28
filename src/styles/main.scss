@@ -1,25 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
-
-body {
-}
+@import "./eat.css";
+@import "./play.css";
+@import "./fight.css";
+@import "./sleep.css";
 
 #app{
   background-color:#dde7eb;
-}
-
-#play{
-  background-color: #498044;
-}
-
-#eat{
-  background-color: #3e5578;
-}
-
-#fight{
-  background-color: #683973;
-}
-
-#sleep{
-  background-color: #7a3d55;  
 }
