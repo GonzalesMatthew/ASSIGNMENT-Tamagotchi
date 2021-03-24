@@ -4,6 +4,8 @@ import playCard from '../components/playCard';
 import fightCard from '../components/fightCard';
 import sleepCard from '../components/sleepCard';
 import buttonEvents from './buttonEvents';
+import progressBar from '../components/progressBar';
+import progress from './progressFunctions';
 
 function brain() {
   appBuilder();
@@ -11,7 +13,9 @@ function brain() {
   playCard();
   fightCard();
   sleepCard();
+  progressBar();
   buttonEvents();
+  progress();
 }
 
 export default brain;
