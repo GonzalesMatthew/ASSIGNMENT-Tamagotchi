@@ -4,6 +4,7 @@ import { runAway, attack } from './fightFunctions';
 import { nap, slumber } from './sleepFunctions';
 import petForm from '../components/petForm';
 import formModal from '../components/formModal';
+import digitizePet from '../components/pet';
 
 function buttonEvents() {
   document.querySelector('#wholeFoods').addEventListener('click', wholeFoods);
@@ -18,6 +19,17 @@ function buttonEvents() {
     if (e.target.id.includes('namePet')) {
       formModal('Name Pet');
       petForm();
+    }
+  });
+  document.querySelector('body').addEventListener('submit', (e) => {
+    if (e.target.id.includes('submit-pet')) {
+      e.preventDefault();
+      const petObject = {
+        name: document.querySelector('#name').value,
+        url: document.querySelector('#url').value
+      };
+      digitizePet(petObject);
+      document.querySelector('#formContainer').innerHTML = '';
     }
   });
 }
