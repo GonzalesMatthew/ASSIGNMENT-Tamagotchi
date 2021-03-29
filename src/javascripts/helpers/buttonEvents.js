@@ -3,7 +3,6 @@ import { superFun, slightlyFun } from './playFunctions';
 import { runAway, attack } from './fightFunctions';
 import { nap, slumber } from './sleepFunctions';
 import petForm from '../components/petForm';
-import formModal from '../components/formModal';
 import digitizePet from '../components/pet';
 
 function buttonEvents() {
@@ -17,8 +16,11 @@ function buttonEvents() {
   document.querySelector('#slumber').addEventListener('click', slumber);
   document.querySelector('body').addEventListener('click', (e) => {
     if (e.target.id.includes('namePet')) {
-      formModal('Name Pet');
-      petForm();
+      if (document.querySelector('#formContainer').innerHTML === '') {
+        petForm();
+      } else {
+        document.querySelector('#formContainer').innerHTML = '';
+      }
     }
   });
   document.querySelector('body').addEventListener('submit', (e) => {
